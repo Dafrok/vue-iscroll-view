@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import IScroll from 'iscroll/build/iscroll-lite.js'
 
-Vue.extend({
+export default Vue.extend({
   template: `<div ref="scrollview"><slot></slot></div>`,
   props: {
     options: {
@@ -30,10 +30,13 @@ Vue.extend({
     },
     scrollTo: {
       type: Array
+    },
+    refresh: {
+      type: Array
     }
   },
   methods: {
-    refresh () {
+    _refresh () {
       this.$nextTick(this.iscroll)
     }
   },
@@ -58,6 +61,9 @@ Vue.extend({
     },
     scrollTo (val) {
       this.iscroll.scrollTo.apply(this.iscroll, val)
+    },
+    refresh (val) {
+      this.iscroll.refresh.apply(this.iscroll, val)
     }
   },
   beforeDestroy () {
@@ -70,12 +76,13 @@ Vue.extend({
       'scrollCancel',
       'scrollStart',
       'scroll',
+      'scrollEnd',
       'flick',
       'zoomStart',
       'zoomEnd'
     ]
 
-    this.iscroll = new IScroll(this.$refs.scrollView, this.options)
+    this.iscroll = new IScroll(this.$refs.scrollview, this.options)
 
     events.forEach(event => {
       this.iscroll.on(event, () => this.$emit(event, this.iscroll))
