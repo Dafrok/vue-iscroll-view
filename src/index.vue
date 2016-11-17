@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import IScroll from 'iscroll/build/iscroll-lite.js'
+<template lang="pug">
+div(ref="scrollView")
+  slot
+</template>
 
-export default Vue.extend({
-  template: `<div ref="scrollview"><slot></slot></div>`,
+<script>
+import IScroll from 'iscroll/build/iscroll-lite.js'
+export default {
   props: {
     options: {
       type: Object,
@@ -36,7 +39,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    _refresh () {
+    refresh () {
       this.$nextTick(this.iscroll)
     }
   },
@@ -75,17 +78,18 @@ export default Vue.extend({
       'beforeScrollStart',
       'scrollCancel',
       'scrollStart',
-      'scroll',
       'scrollEnd',
+      'scroll',
       'flick',
       'zoomStart',
       'zoomEnd'
     ]
 
-    this.iscroll = new IScroll(this.$refs.scrollview, this.options)
+    this.iscroll = new IScroll(this.$refs.scrollView, this.options)
 
     events.forEach(event => {
       this.iscroll.on(event, () => this.$emit(event, this.iscroll))
     })
   }
-})
+}
+</script>
