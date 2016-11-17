@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    refresh () {
+    _refresh () {
       this.$nextTick(this.iscroll)
     }
   },
