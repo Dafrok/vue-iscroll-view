@@ -75,8 +75,8 @@ export default {
     IscrollLite
   },
   methods: {
-    log () {
-      console.log('Scroll start')
+    log (iscroll) {
+      console.log(iscroll)
     }
   }
 }
