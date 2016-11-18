@@ -1,6 +1,6 @@
 # vue-iscroll-lite
 
-[IScroll](https://github.com/cubiq/iscroll)
+[IScroll](https://github.com/cubiq/iscroll) component for Vue 2.0
 
 ## Install
 
