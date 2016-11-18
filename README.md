@@ -42,7 +42,7 @@ export default {
 
 ### Set IScroll options
 
-```
+```vue
 <template>
   <iscroll-lite :options="{preventDefault: false}">
     Your contents
@@ -61,7 +61,7 @@ export default {
 
 ### IScroll custom events
 
-```
+```vue
 <template>
   <iscroll-lite @scrollStart="log">
     Your contents
@@ -85,7 +85,7 @@ export default {
 
 ### Call IScroll instance functions
 
-```
+```vue
 <template>
   <div>
     <iscroll-lite :scrollTo="scrollToArgs" :refresh="refreshArgs">
