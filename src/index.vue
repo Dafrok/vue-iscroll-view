@@ -66,7 +66,7 @@ export default {
       this.iscroll.scrollTo.apply(this.iscroll, val)
     },
     refresh (val) {
-      this.iscroll.refresh.apply(this.iscroll, val)
+      this._refresh()
     }
   },
   beforeDestroy () {
