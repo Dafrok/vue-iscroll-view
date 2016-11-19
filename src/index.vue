@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     _refresh () {
-      this.$nextTick(this.iscroll)
+      this.$nextTick(this.iscroll.refresh)
     }
   },
   watch: {
