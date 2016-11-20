@@ -12,61 +12,32 @@ export default {
       default () {
         return {}
       }
-    },
-    zoom: {
-      type: Array
-    },
-    goToPage: {
-      type: Array
-    },
-    next: {
-      type: Array
-    },
-    prev: {
-      type: Array
-    },
-    scrollToElement: {
-      type: Array
-    },
-    scrollBy: {
-      type: Array
-    },
-    scrollTo: {
-      type: Array
-    },
-    refresh: {
-      type: Array
     }
   },
   methods: {
-    _refresh () {
-      this.$nextTick(this.iscroll.refresh)
-    }
-  },
-  watch: {
-    zoom (val) {
-      this.iscroll.zoom.apply(this.iscroll, val)
+    zoom () {
+      this.$nextTick(this.iscroll.zoom.bind(this.iscroll, arguments))
     },
-    goToPage (val) {
-      this.iscroll.goToPage.apply(this.iscroll, val)
+    goToPage () {
+      this.$nextTick(this.iscroll.goToPage.bind(this.iscroll, arguments))
     },
-    next (val) {
-      this.iscroll.next.apply(this.iscroll, val)
+    next () {
+      this.$nextTick(this.iscroll.next.bind(this.iscroll, arguments))
     },
-    prev (val) {
-      this.iscroll.prev.apply(this.iscroll, val)
+    prev () {
+      this.$nextTick(this.iscroll.prev.bind(this.iscroll, arguments))
     },
-    scrollBy (val) {
-      this.iscroll.scrollBy.apply(this.iscroll, val)
+    scrollToElement () {
+      this.$nextTick(this.iscroll.scrollToElement.bind(this.iscroll, arguments))
     },
-    scrollToElement (val) {
-      this.iscroll.scrollToElement.apply(this.iscroll, val)
+    scrollBy () {
+      this.$nextTick(this.iscroll.scrollBy.bind(this.iscroll, arguments))
     },
-    scrollTo (val) {
-      this.iscroll.scrollTo.apply(this.iscroll, val)
+    scrollTo () {
+      this.$nextTick(this.iscroll.scrollTo.bind(this.iscroll, arguments))
     },
-    refresh (val) {
-      this._refresh()
+    refresh () {
+      this.$nextTick(this.iscroll.refresh.bind(this.iscroll, arguments))
     }
   },
   beforeDestroy () {

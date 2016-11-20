@@ -88,7 +88,7 @@ export default {
 ```vue
 <template>
   <div>
-    <iscroll-lite :scrollTo="scrollToArgs" :refresh="refreshArgs">
+    <iscroll-lite ref="iscroll">
       Your contents
     </iscroll-lite>
     <button @click="scrollToTop">Scroll To Top</button>
@@ -98,19 +98,14 @@ export default {
 <script>
 import IscrollLite from 'vue-iscroll-lite'
 export default {
-  data () {
-    return {
-      scrollToArgs: [],
-      refreshArgs: []
-    }
-  },
   components: {
     IscrollLite
   },
   methods: {
     scrollToTop () {
-      this.scrollToArgs = [0, 0]
-      this.refreshArgs = []
+      const iscroll = this.$refs.iscroll
+      iscroll.scrollTo(0, 0, 100)
+      iscroll.refresh()
     }
   }
 }
