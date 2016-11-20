@@ -59,7 +59,7 @@ export default {
 </script>
 ```
 
-### IScroll custom events
+### Listen IScroll custom events
 
 ```vue
 <template>
