@@ -1,6 +1,6 @@
 {
   "name": "vue-iscroll-lite",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "IScroll-lite for Vue 2.0 Component",
   "main": "index.js",
   "scripts": {

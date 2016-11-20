@@ -16,28 +16,28 @@ export default {
   },
   methods: {
     zoom () {
-      this.$nextTick(this.iscroll.zoom.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.zoom.apply(this.iscroll, arguments))
     },
     goToPage () {
-      this.$nextTick(this.iscroll.goToPage.bind(this.iscroll, arguments))
+      this.$nextTick(() =>this.iscroll.goToPage.apply(this.iscroll, arguments))
     },
     next () {
-      this.$nextTick(this.iscroll.next.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.next.apply(this.iscroll, arguments))
     },
     prev () {
-      this.$nextTick(this.iscroll.prev.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.prev.apply(this.iscroll, arguments))
     },
     scrollToElement () {
-      this.$nextTick(this.iscroll.scrollToElement.bind(this.iscroll, arguments))
+      this.$nextTick(() =>this.iscroll.scrollToElement.apply(this.iscroll, arguments))
     },
     scrollBy () {
-      this.$nextTick(this.iscroll.scrollBy.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.scrollBy.apply(this.iscroll, arguments))
     },
     scrollTo () {
-      this.$nextTick(this.iscroll.scrollTo.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.scrollTo.apply(this.iscroll, arguments))
     },
     refresh () {
-      this.$nextTick(this.iscroll.refresh.bind(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.refresh.apply(this.iscroll, arguments))
     }
   },
   beforeDestroy () {
