@@ -19,7 +19,7 @@ export default {
       this.$nextTick(() => this.iscroll.zoom.apply(this.iscroll, arguments))
     },
     goToPage () {
-      this.$nextTick(() =>this.iscroll.goToPage.apply(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.goToPage.apply(this.iscroll, arguments))
     },
     next () {
       this.$nextTick(() => this.iscroll.next.apply(this.iscroll, arguments))
@@ -28,7 +28,7 @@ export default {
       this.$nextTick(() => this.iscroll.prev.apply(this.iscroll, arguments))
     },
     scrollToElement () {
-      this.$nextTick(() =>this.iscroll.scrollToElement.apply(this.iscroll, arguments))
+      this.$nextTick(() => this.iscroll.scrollToElement.apply(this.iscroll, arguments))
     },
     scrollBy () {
       this.$nextTick(() => this.iscroll.scrollBy.apply(this.iscroll, arguments))
@@ -56,10 +56,11 @@ export default {
       'zoomEnd'
     ]
 
-    this.iscroll = new IScroll(this.$refs.scrollView, this.options)
-
-    events.forEach(event => {
-      this.iscroll.on(event, () => this.$emit(event, this.iscroll))
+    this.$nextTick(() => {
+      this.iscroll = new IScroll(this.$refs.scrollView, this.options)
+      events.forEach(event => {
+        this.iscroll.on(event, () => this.$emit(event, this.iscroll))
+      })
     })
   }
 }
