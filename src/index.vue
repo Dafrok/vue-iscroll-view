@@ -1,6 +1,7 @@
 <template lang="pug">
-div(ref="scrollView")
-  slot
+div(ref="scrollView", :style="warpperStyle", :class="warpperClass")
+  div(:style="scrollerStyle", :class="warpperClass")
+    slot
 </template>
 
 <script>
@@ -8,6 +9,30 @@ import IScroll from 'iscroll/build/iscroll-lite.js'
 export default {
   props: {
     options: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    wrapperClass: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    wrapperStyle: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    scrollerClass: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    scrollerStyle: {
       type: Object,
       default () {
         return {}
