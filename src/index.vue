@@ -1,6 +1,6 @@
 <template lang="pug">
-div(ref="scrollView", :style="warpperStyle", :class="warpperClass")
-  div(:style="scrollerStyle", :class="warpperClass")
+div(ref="scrollView", :style="wrapperStyle", :class="wrapperClass")
+  div(:style="scrollerStyle", :class="scrollerClass")
     slot
 </template>
 
@@ -80,6 +80,11 @@ export default {
       'zoomStart',
       'zoomEnd'
     ]
+
+    setTimeout(() => {
+        this.$refs.scrollView.scrollTop = 0;
+        location.hash && this.iscroll.scrollToElement(location.hash, 0)
+    }, 0);
 
     this.$nextTick(() => {
       this.iscroll = new IScroll(this.$refs.scrollView, this.options)
