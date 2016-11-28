@@ -83,7 +83,11 @@ export default {
 
     setTimeout(() => {
       this.$refs.scrollView.scrollTop = 0;
-      location.hash && this.iscroll.scrollToElement(location.hash, 0)
+      try {
+        location.hash && this.iscroll.scrollToElement(location.hash, 0)
+      }
+      catch(e) {
+      }
     }, 0);
 
     this.$nextTick(() => {
