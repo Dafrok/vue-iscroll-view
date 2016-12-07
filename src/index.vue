@@ -40,6 +40,16 @@ export default {
     }
   },
   methods: {
+    _registPullEvents () {
+      const {iscroll} = this
+      iscroll.on('scrollEnd', e => {
+        if (iscroll.y <= iscroll.maxScrollY) {
+          this.$emit('pullup', iscroll)
+        } else if (iscroll.y >= 0) {
+          this.$emit('pulldown', iscroll)
+        }
+      })
+    },
     zoom () {
       this.$nextTick(() => this.iscroll.zoom.apply(this.iscroll, arguments))
     },
@@ -95,6 +105,7 @@ export default {
       events.forEach(event => {
         this.iscroll.on(event, () => this.$emit(event, this.iscroll))
       })
+      this._registPullEvents();
     })
   }
 }
