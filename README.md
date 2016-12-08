@@ -59,7 +59,7 @@ export default {
 </script>
 ```
 
-### Listen IScroll custom events
+### Listen IScroll events
 
 ```vue
 <template>
@@ -106,6 +106,36 @@ export default {
       const iscroll = this.$refs.iscroll
       iscroll.scrollTo(0, 0, 100)
       iscroll.refresh()
+    }
+  }
+}
+</script>
+```
+
+### Custom events
+
+- pullUp
+- pullDown
+
+```vue
+<template>
+  <iscroll-lite @pullUp="refresh", @pullDown="load">
+    Your contents
+  </iscroll-lite>
+</tempalte>
+
+<script>
+import IscrollLite from 'vue-iscroll-lite'
+export default {
+  components: {
+    IscrollLite
+  },
+  methods: {
+    refresh (iscroll) {
+      // Refresh current data
+    },
+    load (iscroll) {
+      // Load new data
     }
   }
 }

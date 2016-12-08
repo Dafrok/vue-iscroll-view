@@ -44,9 +44,9 @@ export default {
       const {iscroll} = this
       iscroll.on('scrollEnd', e => {
         if (iscroll.y <= iscroll.maxScrollY) {
-          this.$emit('pullup', iscroll)
+          this.$emit('pullUp', iscroll)
         } else if (iscroll.y >= 0) {
-          this.$emit('pulldown', iscroll)
+          this.$emit('pullDown', iscroll)
         }
       })
     },
