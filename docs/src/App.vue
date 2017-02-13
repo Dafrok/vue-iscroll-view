@@ -1,5 +1,5 @@
 <template>
-  <iscroll-view class="scroll-view">
+  <iscroll-view ref="scrollView" class="scroll-view" @pullUp="pullup" @pullDown="pulldown">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula nulla, aliquet at volutpat ut, maximus sed neque. Morbi tempor gravida velit, ut gravida justo imperdiet non. Fusce gravida vestibulum ex at lobortis. Donec enim eros, ullamcorper sit amet nulla vel, feugiat rhoncus lectus. Duis tempor sollicitudin sem, sit amet laoreet erat tempor id. Nulla auctor, tellus et mattis ornare, urna velit pharetra enim, vel tristique felis diam et tellus. Pellentesque libero neque, maximus eget interdum eu, finibus a justo. Aenean at accumsan enim. Pellentesque et rutrum purus, vel tristique massa.
     </p>
@@ -12,10 +12,33 @@
   </iscroll-view>
 </template>
 
+<script>
+export default {
+  methods: {
+    pullup () {
+      console.log('Pull up.')
+    },
+    pulldown () {
+      console.log('Pull down.')
+    }
+  },
+  mounted () {
+    console.log(this.$refs)
+    this.$refs.scrollView.refresh()
+  }
+}
+</script>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
 .scroll-view {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 1px solid black;
   padding: 5px;
   overflow: hidden;

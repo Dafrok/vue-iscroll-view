@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import IScrollView from '../../index.js'
+import IScrollView from '../../src/index.js'
 import IScroll from 'iscroll'
 
 import App from './App.vue'
