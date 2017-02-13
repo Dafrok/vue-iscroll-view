@@ -108,7 +108,7 @@ export default {
 
 ```vue
 <template>
-  <iscroll-view @pullUp="refresh", @pullDown="load">
+  <iscroll-view @pullUp="load" @pullDown="refresh">
     Your contents
   </iscroll-view>
 </tempalte>
