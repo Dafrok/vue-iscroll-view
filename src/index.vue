@@ -5,8 +5,10 @@ div(ref="scrollView", :style="wrapperStyle", :class="wrapperClass")
 </template>
 
 <script>
-import IScroll from 'iscroll/build/iscroll-lite.js'
+import Vue from 'vue'
+
 export default {
+  name: 'iscroll-view',
   props: {
     options: {
       type: Object,
@@ -101,6 +103,7 @@ export default {
     }, 0);
 
     this.$nextTick(() => {
+      const IScroll = Vue._IScroll
       this.iscroll = new IScroll(this.$refs.scrollView, this.options)
       events.forEach(event => {
         this.iscroll.on(event, () => this.$emit(event, this.iscroll))

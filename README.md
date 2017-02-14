@@ -1,11 +1,19 @@
-# vue-iscroll-lite
+# vue-iscroll-view
 
 [IScroll](https://github.com/cubiq/iscroll) component for Vue 2.0
 
 ## Install
 
+```bash
+$ npm i vue-iscroll-view
+$ npm i iscroll
 ```
-$ npm i vue-iscroll-lite
+
+```
+import IScroll from 'iscroll'
+import IScrollView from 'vue-iscroll-view'
+
+Vue.use(Iscroll)
 ```
 
 ## Get Start
@@ -18,7 +26,7 @@ $ npm i vue-iscroll-lite
 </tempalte>
 
 <script>
-import IscrollLite from 'vue-iscroll-lite'
+
 export default {
   components: {
     IscrollLite
