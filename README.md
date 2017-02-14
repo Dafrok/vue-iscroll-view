@@ -9,13 +9,16 @@ $ npm i vue-iscroll-view
 $ npm i iscroll
 ```
 
-```
+```javascript
 import IScrollView from 'vue-iscroll-view'
+
+/* Using these kinds of IScroll class for different cases. */
 import IScroll from 'iscroll'
 // import IScroll from 'iscroll/build/iscroll-infinite.js
 // import IScroll from 'iscroll/build/iscroll-probe.js
 // import IScroll from 'iscroll/build/iscroll-view.js
 // import IScroll from 'iscroll/build/iscroll-zoom.js
+
 
 Vue.use(IScrollView, IScroll)
 ```
