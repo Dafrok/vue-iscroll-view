@@ -1,6 +1,6 @@
 {
   "name": "vue-iscroll-view",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "IScroll for Vue 2.0 Component",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dafrok/vue-iscroll-lite.git"
+    "url": "git+https://github.com/Dafrok/vue-iscroll-view.git"
   },
   "keywords": [
     "iscroll",
@@ -20,9 +20,9 @@
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dafrok/vue-iscroll-lite/issues"
+    "url": "https://github.com/Dafrok/vue-iscroll-view/issues"
   },
-  "homepage": "https://github.com/Dafrok/vue-iscroll-lite#readme",
+  "homepage": "https://github.com/Dafrok/vue-iscroll-view#readme",
   "peerDependencies": {
     "iscroll": ">=5.2.0",
     "vue": ">=2.0.7"
