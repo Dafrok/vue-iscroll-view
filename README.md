@@ -9,6 +9,8 @@ $ npm i vue-iscroll-view
 $ npm i iscroll
 ```
 
+## Get Start
+
 ```javascript
 import IScrollView from 'vue-iscroll-view'
 
@@ -22,8 +24,6 @@ import IScroll from 'iscroll'
 
 Vue.use(IScrollView, IScroll)
 ```
-
-## Get Start
 
 ```vue
 <template>
