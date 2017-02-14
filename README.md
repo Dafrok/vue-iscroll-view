@@ -21,7 +21,6 @@ import IScroll from 'iscroll'
 // import IScroll from 'iscroll/build/iscroll-view.js
 // import IScroll from 'iscroll/build/iscroll-zoom.js
 
-
 Vue.use(IScrollView, IScroll)
 ```
 
