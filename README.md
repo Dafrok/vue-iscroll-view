@@ -10,29 +10,24 @@ $ npm i iscroll
 ```
 
 ```
-import IScroll from 'iscroll'
 import IScrollView from 'vue-iscroll-view'
+import IScroll from 'iscroll'
+// import IScroll from 'iscroll/build/iscroll-infinite.js
+// import IScroll from 'iscroll/build/iscroll-probe.js
+// import IScroll from 'iscroll/build/iscroll-view.js
+// import IScroll from 'iscroll/build/iscroll-zoom.js
 
-Vue.use(Iscroll)
+Vue.use(IScrollView, IScroll)
 ```
 
 ## Get Start
 
 ```vue
 <template>
-  <iscroll-lite class="scroll-view">
+  <iscroll-view class="scroll-view">
     Your contents
-  </iscroll-lite>
+  </iscroll-view>
 </tempalte>
-
-<script>
-
-export default {
-  components: {
-    IscrollLite
-  }
-}
-</script>
 
 <style>
 .scroll-view {
@@ -52,36 +47,23 @@ export default {
 
 ```vue
 <template>
-  <iscroll-lite :options="{preventDefault: false}">
+  <iscroll-view :options="{preventDefault: false}">
     Your contents
-  </iscroll-lite>
+  </iscroll-view>
 </tempalte>
-
-<script>
-import IscrollLite from 'vue-iscroll-lite'
-export default {
-  components: {
-    IscrollLite
-  }
-}
-</script>
 ```
 
 ### Listen IScroll events
 
 ```vue
 <template>
-  <iscroll-lite @scrollStart="log">
+  <iscroll-view @scrollStart="log">
     Your contents
-  </iscroll-lite>
+  </iscroll-view>
 </tempalte>
 
 <script>
-import IscrollLite from 'vue-iscroll-lite'
 export default {
-  components: {
-    IscrollLite
-  },
   methods: {
     log (iscroll) {
       console.log(iscroll)
@@ -96,19 +78,15 @@ export default {
 ```vue
 <template>
   <div>
-    <iscroll-lite ref="iscroll">
+    <iscroll-view ref="iscroll">
       Your contents
-    </iscroll-lite>
+    </iscroll-view>
     <button @click="scrollToTop">Scroll To Top</button>
   </div>
 </tempalte>
 
 <script>
-import IscrollLite from 'vue-iscroll-lite'
 export default {
-  components: {
-    IscrollLite
-  },
   methods: {
     scrollToTop () {
       const iscroll = this.$refs.iscroll
@@ -127,17 +105,13 @@ export default {
 
 ```vue
 <template>
-  <iscroll-lite @pullUp="refresh", @pullDown="load">
+  <iscroll-view @pullUp="refresh", @pullDown="load">
     Your contents
-  </iscroll-lite>
+  </iscroll-view>
 </tempalte>
 
 <script>
-import IscrollLite from 'vue-iscroll-lite'
 export default {
-  components: {
-    IscrollLite
-  },
   methods: {
     refresh (iscroll) {
       // Refresh current data
