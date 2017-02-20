@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/vue-iscroll-view.svg)](https://badge.fury.io/js/vue-iscroll-view)
+
 # vue-iscroll-view
 
 [IScroll](https://github.com/cubiq/iscroll) component for Vue 2.0
