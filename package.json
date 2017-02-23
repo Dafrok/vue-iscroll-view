@@ -1,6 +1,6 @@
 {
   "name": "vue-iscroll-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IScroll for Vue 2.0 Component",
   "main": "index.js",
   "scripts": {
