@@ -41,6 +41,7 @@ Vue.use(IScrollView, IScroll)
   left: 0;
   right: 0;
   overflow: hidden;
+  touch-action: none; /* For chrome 55+ */
 }
 </style>
 ```
