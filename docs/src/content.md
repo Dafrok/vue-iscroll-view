@@ -64,7 +64,7 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  padding: 5px;
+  padding: 1rem;
   overflow: hidden;
 }
 </style>

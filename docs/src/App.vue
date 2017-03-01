@@ -32,11 +32,11 @@ export default {
 .scroll-view {
   touch-action: none;
   position: fixed;
-  left: 1rem;
-  right: 1rem;
-  top: 1rem;
-  bottom: 1rem;
-  padding: 5px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
   overflow: hidden;
 }
 </style>
