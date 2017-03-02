@@ -6,7 +6,7 @@
 
 <script>
 import Hljs from 'highlight.js'
-import DocContent from './content.md'
+import DocContent from './md/content.md'
 
 export default {
   components: {

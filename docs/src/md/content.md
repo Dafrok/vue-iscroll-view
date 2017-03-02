@@ -19,6 +19,7 @@ import IScroll from 'iscroll'
 // import IScroll from 'iscroll/build/iscroll-probe.js
 // import IScroll from 'iscroll/build/iscroll-view.js
 // import IScroll from 'iscroll/build/iscroll-zoom.js
+// import IScroll from 'iscroll/build/iscroll-lite.js
 
 Vue.use(IScrollView, IScroll)
 ```
@@ -39,8 +40,6 @@ This page is rendered by vue-iscroll-view, Pull it up and down to preview.
 </template>
 
 <script>
-import Content from './content.md'
-
 export default {
   methods: {
     pullUp () {
@@ -58,7 +57,9 @@ export default {
 
 <style>
 .scroll-view {
-  touch-action: none; /* For chrome 55+ */
+  /* -- Attention: This line is extremely important in chrome 55+! -- */
+  touch-action: none;
+  /* -- Attention-- */
   position: fixed;
   left: 0;
   right: 0;
