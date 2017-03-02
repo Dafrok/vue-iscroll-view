@@ -4,6 +4,10 @@
 
 [IScroll](https://github.com/cubiq/iscroll) component for Vue 2.0
 
+## Demo
+
+> https://dafrok.github.io/vue-iscroll-view/
+
 ## Install
 
 ```bash
