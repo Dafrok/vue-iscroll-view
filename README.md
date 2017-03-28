@@ -2,7 +2,7 @@
 
 # vue-iscroll-view
 
-[IScroll](https://github.com/cubiq/iscroll) component for Vue 2.0
+[IScroll](https://github.com/cubiq/iscroll) component for Vue 2.x
 
 ## Demo
 
