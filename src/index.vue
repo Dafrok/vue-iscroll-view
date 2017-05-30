@@ -1,6 +1,6 @@
 <template lang="pug">
 div(ref="scrollView", :style="wrapperStyle", :class="wrapperClass")
-  div(:style="scrollerStyle", :class="scrollerClass")
+  div(ref="scroller", :style="scrollerStyle", :class="scrollerClass")
     slot
 </template>
 
@@ -94,9 +94,12 @@ export default {
     ]
 
   setTimeout(() => {
-      let key, value
+
+      let key
+      let value
       let attributes = this.$refs.scrollView.attributes
-      this.$refs.scrollView.scrollTop = 0;
+
+      this.$refs.scrollView.scrollTop = 0
       for (key in attributes) {
           value = attributes[key]
           if (value instanceof Attr && value.name.indexOf('data-v-') > -1) {
