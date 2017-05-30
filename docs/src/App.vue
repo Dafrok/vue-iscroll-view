@@ -1,5 +1,5 @@
 <template>
-  <iscroll-view ref="scrollView" class="scroll-view" @pullUp="pullUp" @pullDown="pullDown" :options="{mouseWheel: true}">
+  <iscroll-view ref="scrollView" class="scroll-view" @pullUp="pullUp" @pullDown="pullDown" :options="{mouseWheel: true}" :scrollerClass="{scroller: true}">
     <doc-content class="markdown-body"/>
   </iscroll-view>
 </template>
@@ -38,5 +38,8 @@ export default {
   bottom: 0;
   padding: 1rem;
   overflow: hidden;
+}
+.scroller {
+  background: green;
 }
 </style>
