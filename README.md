@@ -135,3 +135,31 @@ export default {
 }
 </script>
 ```
+
+### The Scroller
+
+Each iscroll instance contains a wrapper and a scroller, the `<iscroll-view>` element is simply a reference the wrapper. If you need to take control of the scroller, the following case may help you.
+
+```vue
+<template>
+  <iscroll-view ref="iscroll" :scrollerStyle="{color: 'red'}" scrollerClass="{scroller: true}">
+    Your contents
+  </iscroll-view>
+</tempalte>
+
+<script>
+export default {
+  mounted () {
+    /* Get the reference of the scroller */
+    const $scroller = this.$refs.iscroll.$refs.scroller
+    console.log($scroller)
+  }
+}
+</script>
+
+<style scoped>
+.scroller {
+  background: blue
+}
+</style>
+```

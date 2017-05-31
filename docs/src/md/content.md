@@ -8,6 +8,7 @@
 $ npm i vue-iscroll-view
 $ npm i iscroll
 ```
+
 ## Usage
 
 ```javascript
