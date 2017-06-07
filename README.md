@@ -9,7 +9,7 @@
 > https://dafrok.github.io/vue-iscroll-view/
 
 ## Built with vue-iscroll-view
-> [vue-flexible-app](https://rawgit.com/momopig/vue-iscroll-view/master/qr_code/vue-flexible-app.png)
+> [vue-flexible-app](https://github.com/momopig/vue-flexible-app)
 
 ## Install
 
