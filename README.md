@@ -9,9 +9,7 @@
 > https://dafrok.github.io/vue-iscroll-view/
 
 ## Built with vue-iscroll-view
-### [vue-flexible-app](https://github.com/momopig/vue-flexible-app)
-![vue-flexible-app](https://rawgit.com/momopig/vue-iscroll-view/master/qr_code/vue-flexible-app.png)
-<br/>ps: the page implements the smooth scrolling with vue-iscroll-view in vertical and horizontal direction
+> [vue-flexible-app](https://rawgit.com/momopig/vue-iscroll-view/master/qr_code/vue-flexible-app.png)
 
 ## Install
 
