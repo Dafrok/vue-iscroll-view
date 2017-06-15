@@ -39,7 +39,4 @@ export default {
   padding: 1rem;
   overflow: hidden;
 }
-.scroller {
-  background: green;
-}
 </style>
