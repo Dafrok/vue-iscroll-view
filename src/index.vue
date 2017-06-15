@@ -93,25 +93,23 @@ export default {
       'zoomEnd'
     ]
 
-  setTimeout(() => {
-
+    setTimeout(() => {
       let key
       let value
       let attributes = this.$refs.scrollView.attributes
 
       this.$refs.scrollView.scrollTop = 0
       for (key in attributes) {
-          value = attributes[key]
-          if (value instanceof Attr && value.name.indexOf('data-v-') > -1) {
-              this.$refs.scroller.attributes.setNamedItem(document.createAttribute(value.name))
-          }
+        value = attributes[key]
+        if (value instanceof global.Attr && value.name.indexOf('data-v-') > -1) {
+          this.$refs.scroller.attributes.setNamedItem(document.createAttribute(value.name))
+        }
       }
       try {
-          location.hash && this.iscroll.scrollToElement(location.hash, 0)
+        global.location.hash && this.iscroll.scrollToElement(global.location.hash, 0)
+      } catch (e) {
       }
-      catch(e) {
-      }
-  }, 0);
+    }, 0)
 
     this.$nextTick(() => {
       const IScroll = Vue._IScroll
@@ -119,7 +117,7 @@ export default {
       events.forEach(event => {
         this.iscroll.on(event, () => this.$emit(event, this.iscroll))
       })
-      this._registPullEvents();
+      this._registPullEvents()
     })
   }
 }

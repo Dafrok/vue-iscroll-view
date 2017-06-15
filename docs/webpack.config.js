@@ -12,22 +12,22 @@ module.exports = {
         loaders: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
+                use: ['vue-loader', 'eslint-loader'],
                 exclude: /node_modules/
             },
             {
                 test: /\.md$/,
-                loader: 'vue-markdown-loader',
+                use: 'vue-markdown-loader',
                 exclude: /node_modules/
             },
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
+                use: ['babel-loader', 'eslint-loader'],
                 exclude: [/node_modules/, /md/]
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
