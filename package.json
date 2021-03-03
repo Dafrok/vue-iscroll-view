@@ -48,7 +48,7 @@
     "highlight.js": "^9.9.0",
     "html-webpack-plugin": "^2.28.0",
     "iscroll": "^5.2.0",
-    "pug": "^2.0.0-beta6",
+    "pug": "^3.0.1",
     "style-loader": "^0.13.2",
     "vue": "^2.1.10",
     "vue-loader": "^9.9.5",
